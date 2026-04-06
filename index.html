@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentin Camaño</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="nav">
+    <span class="nav-logo">VC</span>
+    <ul class="nav-links">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#work">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-eyebrow">— Disponible para trabajar</p>
+      <h1 class="hero-title">
+        <span class="line">VALENTIN</span>
+        <span class="line">CAMAÑO</span>
+      </h1>
+      <p class="hero-role">Developer <span class="divider">/</span> Designer <span class="divider">/</span> Buenos Aires</p>
+      <a href="#work" class="hero-cta">Ver proyectos →</a>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="hero-image-placeholder" id="heroImg">
+        <img src="foto.jpg" alt="Valentin Camaño" onerror="this.parentElement.classList.add('no-img')" />
+        <span class="placeholder-text">Tu foto aquí<br><small>Poné tu imagen en la carpeta<br>con el nombre <code>foto.jpg</code></small></span>
+      </div>
+      <div class="hero-image-border"></div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="section" id="about">
+    <div class="section-label">01 — SOBRE MÍ</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Soy un desarrollador apasionado por crear experiencias digitales limpias,
+          funcionales y bien pensadas. Me enfoco en el detalle, la performance y la
+          comunicación clara a través del código.
+        </p>
+        <p>
+          Trabajo con tecnologías modernas de frontend y me interesa la intersección
+          entre diseño y desarrollo.
+        </p>
+      </div>
+      <div class="about-skills">
+        <div class="skill-group">
+          <span class="skill-label">STACK</span>
+          <ul>
+            <li>JavaScript / TypeScript</li>
+            <li>React / Next.js</li>
+            <li>Node.js</li>
+            <li>CSS / Tailwind</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">HERRAMIENTAS</span>
+          <ul>
+            <li>Git / GitHub</li>
+            <li>Figma</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section" id="work">
+    <div class="section-label">02 — PROYECTOS</div>
+    <div class="projects-list" id="projects-container"></div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section--contact" id="contact">
+    <div class="section-label">03 — CONTACTO</div>
+    <div class="contact-content">
+      <h2 class="contact-title">¿TRABAJAMOS<br>JUNTOS?</h2>
+      <div class="contact-links">
+        <a href="mailto:tu@email.com" class="contact-link">tu@email.com ↗</a>
+        <a href="https://github.com/tuusuario" target="_blank" class="contact-link">GitHub ↗</a>
+        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="contact-link">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>© <span id="year"></span> Valentin Camaño</span>
+    <span>Hecho con JS vanilla</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
