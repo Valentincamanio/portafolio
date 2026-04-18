@@ -155,6 +155,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 18px;
 }
 
 .hero-image-placeholder img {
@@ -258,8 +259,9 @@ ul { list-style: none; }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 240px;
   align-items: start;
+  
 }
 
 .about-text p {
@@ -268,23 +270,126 @@ ul { list-style: none; }
   color: #aaa;
   margin-bottom: 20px;
   font-weight: 300;
+  margin-top: 28px;
 }
 
-.about-skills { display: flex; gap: 56px; }
+/* ===========================
+   ABOUT ITEMS
+=========================== */
 
-.skill-label {
-  display: block;
-  font-size: 0.6rem;
-  letter-spacing: 0.22em;
-  color: var(--muted);
-  margin-bottom: 16px;
+.about-items {
+  display: flex;
+  align-items: center;
+  justify-self: start;
 }
 
-.skill-group li {
-  font-size: 0.82rem;
-  line-height: 2.2;
-  color: #888;
-  font-weight: 300;
+.about-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+/* ITEM */
+.about-list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: #aaa;
+  font-weight: 400;
+}
+
+/* BULLET CUSTOM */
+.about-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--fg);
+  opacity: 0.8;
+}
+
+/* ===========================
+   HABILIDADES
+=========================== */
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+}
+
+/* TITULOS DE CATEGORIA */
+.skills-group-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(20px, 2.4vw, 32px);
+  letter-spacing: 0.06em;
+  color: var(--fg);
+  margin-bottom: 28px;
+  position: relative;
+  text-align: center;
+}
+
+/* linea decorativa */
+.skills-group-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  width: 42px;
+  height: 2px;
+  background: var(--fg);
+  opacity: 0.6;
+}
+
+/* GRID CENTRADO */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 720px;
+}
+
+/* CARD */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 96px;
+  height: 96px;
+  border: 1px solid var(--border);
+  background: #111;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.skill-card:hover {
+  border-color: #444;
+  transform: translateY(-4px);
+}
+
+.skill-card svg,
+.skill-card img {
+  width: 36px;
+  height: 36px;
+}
+
+/* TEXTO MAS GRUESO */
+.skill-card span {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg);
+  font-weight: 500;
 }
 
 /* ===========================
@@ -346,18 +451,8 @@ ul { list-style: none; }
    CONTACTO
 =========================== */
 .section--contact {
-  min-height: 55vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 40px;
-  flex-wrap: wrap;
+  min-height: auto;
+  display: block;
 }
 
 .contact-title {
@@ -365,28 +460,59 @@ ul { list-style: none; }
   font-size: clamp(52px, 8vw, 110px);
   letter-spacing: 0.03em;
   line-height: 0.95;
+  margin-bottom: 56px;
+  text-align: center;
 }
 
-.contact-links {
-  display: flex;
-  flex-direction: column;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
-  align-items: flex-end;
 }
 
-.contact-link {
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  transition: color 0.2s;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 32px;
+  background: #111;
+  border: 1px solid var(--border);
+  color: white;
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  text-decoration: none;
 }
 
-.contact-link:hover {
+.contact-card span {
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.contact-card:hover {
+  border-color: #444;
   color: var(--fg);
-  border-color: var(--fg);
+  transform: translateY(-2px);
+}
+
+.contact-card-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card-icon svg {
+  width: 28px;
+  height: 28px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.contact-card:hover .contact-card-icon svg {
+  opacity: 1;
 }
 
 /* ===========================
@@ -451,7 +577,6 @@ ul { list-style: none; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-skills { gap: 36px; }
   .project-item { grid-template-columns: 40px 1fr 20px; gap: 16px; }
-  .contact-content { flex-direction: column; align-items: flex-start; }
-  .contact-links { align-items: flex-start; }
+  .contact-grid { grid-template-columns: 1fr; }
   .footer { flex-direction: column; gap: 8px; }
 }

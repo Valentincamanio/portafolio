@@ -13,9 +13,10 @@
 
   <!-- NAVEGACIÓN -->
   <nav class="nav">
-    <span class="nav-logo">VC</span>
+    <span class="nav-logo"><a href="#home">VC</a></span>
     <ul class="nav-links">
       <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Habilidades</a></li>
       <li><a href="#work">Proyectos</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
@@ -29,14 +30,13 @@
         <span class="line">VALENTIN</span>
         <span class="line">CAMAÑO</span>
       </h1>
-      <p class="hero-role">Developer <span class="divider">/</span> Designer <span class="divider">/</span> Buenos Aires</p>
+      <p class="hero-role">Desarrollador <span class="divider">/</span> Full Stack <span class="divider">/</span> Buenos Aires</p>
       <a href="#work" class="hero-cta">Ver proyectos →</a>
     </div>
 
     <div class="hero-image-wrap">
       <div class="hero-image-placeholder" id="heroImg">
         <img src="foto.jpg" alt="Valentin Camaño" onerror="this.parentElement.classList.add('no-img')" />
-        <span class="placeholder-text">Tu foto aquí<br><small>Poné tu imagen en la carpeta<br>con el nombre <code>foto.jpg</code></small></span>
       </div>
       <div class="hero-image-border"></div>
     </div>
@@ -49,7 +49,7 @@
 
   <!-- SOBRE MÍ -->
   <section class="section" id="about">
-    <div class="section-label">01 — SOBRE MÍ</div>
+    <div class="">01 — SOBRE MÍ</div>
     <div class="about-grid">
       <div class="about-text">
         <p>
@@ -62,47 +62,79 @@
           entre diseño y desarrollo.
         </p>
       </div>
-      <div class="about-skills">
-        <div class="skill-group">
-          <span class="skill-label">STACK</span>
-          <ul>
-            <li>JavaScript / TypeScript</li>
-            <li>React / Next.js</li>
-            <li>Node.js</li>
-            <li>CSS / Tailwind</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <span class="skill-label">HERRAMIENTAS</span>
-          <ul>
-            <li>Git / GitHub</li>
-            <li>Figma</li>
-            <li>VS Code</li>
-          </ul>
-        </div>
-      </div>
+
+    <div class="about-items">
+      <ul class="about-list">
+        <li>Trabajo en equipo</li>
+        <li>Rápida adaptación</li>
+        <li>Comunicación clara</li>
+        <li>Resolución de problemas</li>
+      </ul>
     </div>
+  
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="section" id="skills">
+    <div class="">02 — HABILIDADES</div>
+    <div class="skills-container" id="skills-container"></div>
   </section>
 
   <!-- PROYECTOS -->
   <section class="section" id="work">
-    <div class="section-label">02 — PROYECTOS</div>
+    <div class="">03 — PROYECTOS</div>
     <div class="projects-list" id="projects-container"></div>
   </section>
 
   <!-- CONTACTO -->
   <section class="section section--contact" id="contact">
-    <div class="section-label">03 — CONTACTO</div>
-    <div class="contact-content">
-      <h2 class="contact-title">¿TRABAJAMOS<br>JUNTOS?</h2>
-      <div class="contact-links">
-        <a href="mailto:tu@email.com" class="contact-link">tu@email.com ↗</a>
-        <a href="https://github.com/tuusuario" target="_blank" class="contact-link">GitHub ↗</a>
-        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="contact-link">LinkedIn ↗</a>
-      </div>
+    <h2 class="contact-title">Contacto</h2>
+    <div class="contact-grid">
+ 
+      <a href="https://linkedin.com/in/valentincamaño" target="_blank" class="contact-card reveal">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="4" fill="white"/>
+            <path d="M6.94 5a2 2 0 11-4-.002 2 2 0 014 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z" fill="#0A66C2"/>
+          </svg>
+        </div>
+        <span>Valentin Camaño</span>
+      </a>
+ 
+      <a href="mailto:tu@email.com" class="contact-card reveal">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M22 6l-10 7L2 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span>elcolo619@gmail.com</span>
+      </a>
+ 
+      <a href="cv.pdf" target="_blank" class="contact-card reveal">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M14 2v6h6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 13h6M9 17h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span>Curriculum Vitae</span>
+      </a>
+ 
+      <a href="https://github.com/valentincamanio" target="_blank" class="contact-card reveal">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+          </svg>
+        </div>
+        <span>/valentincamanio</span>
+      </a>
+ 
     </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer class="footer">
     <span>© <span id="year"></span> Valentin Camaño</span>
