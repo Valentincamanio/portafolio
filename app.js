@@ -3,17 +3,22 @@
 =========================== */
 const projects = [
   {
-    title: "Proyecto Uno",
+    title: "Woof",
     tags: ["React", "Node.js", "API REST"],
     url: "#",
   },
   {
-    title: "Proyecto Dos",
+    title: "Api Instagram",
     tags: ["JavaScript", "CSS", "UI Design"],
     url: "#",
   },
   {
-    title: "Proyecto Tres",
+    title: "OneTwice",
+    tags: ["Next.js", "TypeScript", "PostgreSQL"],
+    url: "#",
+  },
+  {
+    title: "Calculadora - Proximamente...",
     tags: ["Next.js", "TypeScript", "PostgreSQL"],
     url: "#",
   },
@@ -44,7 +49,7 @@ const skills = [
         svg: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="3" fill="#E34F26"/><path d="M7 4l1.8 20.4L16 27l7.2-2.6L25 4H7zm13.8 6.5H13l.2 2.5h7.4l-.6 6.7-4 1.1-4-1.1-.3-3h2.4l.1 1.5 1.8.5 1.8-.5.2-2.5H11.8L11 8.5h10.1l-.3 2z" fill="white"/></svg>`
       },
       {
-        name: "CSS",
+        name: "CSS 3",
         svg: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="3" fill="#1572B6"/><path d="M7 4l1.8 20.4L16 27l7.2-2.6L25 4H7zm12 14.6l-3 .8-3-.8-.2-2.5h2.4l.1 1.3 1.7.5 1.7-.5.2-2.1-5.6-1.5-.4-5h8.8l-.3 2.5H13l.1 1.5 3.9 1 .9.3 1 .3-.9 5.2z" fill="white"/></svg>`
       },
       {
@@ -66,7 +71,7 @@ const skills = [
     ]
   },
   {
-    category: "Backend & DB",
+    category: "Backend & Herramientas",
     items: [
       {
         name: "Node.js",
@@ -161,9 +166,8 @@ function initReveal() {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.08 }
   );
-
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 }
 
@@ -199,6 +203,28 @@ function initNav() {
 }
 
 /* ===========================
+   HAMBURGER MENU
+=========================== */
+function initHamburger() {
+  const toggle = document.getElementById("navToggle");
+  const links = document.getElementById("navLinks");
+  if (!toggle || !links) return;
+
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("open");
+    links.classList.toggle("open");
+  });
+
+  // Cerrar al hacer click en un link
+  links.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      toggle.classList.remove("open");
+      links.classList.remove("open");
+    });
+  });
+}
+
+/* ===========================
    INIT
 =========================== */
 document.addEventListener("DOMContentLoaded", () => {
@@ -207,4 +233,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setYear();
   initReveal();
   initNav();
+  initHamburger();
 });
