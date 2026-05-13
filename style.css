@@ -106,7 +106,7 @@ img { display: block; max-width: 100%; }
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: rgb(102, 169, 93);
   margin-bottom: 24px;
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 0.15s;
@@ -131,7 +131,7 @@ img { display: block; max-width: 100%; }
   font-size: 0.76rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: grey;
   margin-bottom: 40px;
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 0.6s;
@@ -268,7 +268,7 @@ img { display: block; max-width: 100%; }
   content: '';
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
   width: 6px;
   height: 6px;
@@ -294,11 +294,13 @@ img { display: block; max-width: 100%; }
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
+  text-align: center;
 }
 
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;   
   gap: 12px;
 }
 
@@ -365,9 +367,12 @@ img { display: block; max-width: 100%; }
   font-size: 0.58rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  padding: 3px 9px;
+
+  color: #cfcfcf;              
+  border: 1px solid rgb(43, 96, 42);      
+  background: #141414;         
+
+  padding: 4px 10px;
 }
 .project-arrow {
   font-size: 1.1rem;
