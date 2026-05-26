@@ -23,15 +23,15 @@ const projects = [
     title: "OneTwice",
     tags: ["HTML", "CSS", "JavaScript", "PostgreSQL"],
     descripcion:
-      "Ecommerce de venta de mates con catálogo dinámico y carrito de compras. Incluye gestión de productos y persistencia de datos, enfocado en experiencia de usuario y flujo de compra completo.",
+      "Ecommerce de venta de ropa con catálogo dinámico y carrito de compras. Incluye gestión de productos y persistencia de datos, enfocado en experiencia de usuario y flujo de compra completo.",
     url: "#",
   },
 
   {
-    title: "Calculadora — Próximamente",
-    tags: [],
+    title: "Clon de Airbnb",
+    tags: ["HTML", "Java", "POO", "Observer", "Adapter", "State", "Strategy", "Singleton"],
     descripcion:
-      "Proyecto en desarrollo enfocado en lógica de programación, manejo de estados y optimización de interfaces interactivas.",
+        "Aplicación inspirada en Airbnb, desarrollada en Java aplicando Programación Orientada a Objetos y patrones de diseño como Observer, Adapter, State, Strategy y Singleton. Incluye gestión de reservas, inmuebles, políticas de cancelación y notificaciones a usuarios.",
     url: "#",
   },
 ];
