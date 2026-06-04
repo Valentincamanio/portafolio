@@ -246,7 +246,7 @@ img { display: block; max-width: 100%; }
 =========================== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 80px;
   align-items: start;
 }
@@ -498,8 +498,13 @@ img { display: block; max-width: 100%; }
     text-align: center;
   }
   .hero-content { order: 2; }
-  .hero-image-wrap { order: 1; max-width: 120px; margin: 0 auto; }
-  .hero-image-box { aspect-ratio: 1/1; border-radius: 50%; }
+  .hero-image-wrap {
+    order: 1;
+    width: 100%;       /* ← Agregado para mantener el círculo perfecto */
+    max-width: 220px;  /* ← Aumentado para mejor proporción visual */
+    margin: 0 auto;
+  }
+
   .hero-role { justify-content: center; }
   .hero-scroll { display: none; }
 
@@ -553,7 +558,11 @@ img { display: block; max-width: 100%; }
   .hero {
   padding-top: 140px;
 }
-  .hero-image-wrap { max-width: 120px; }
+  .hero-image-wrap {
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto;
+  }
   .hero-title { font-size: clamp(56px, 18vw, 80px); }
 
   /* About */
